@@ -12,6 +12,9 @@ export const contactURL = `${baseURL}/api/contact`;
 export const selectionUrl = `${baseURL}/api/selection`;
 export const blogURL = `${baseURL}/api/blog/post`;
 export const transactionURL = `${baseURL}/api/wallet/transaction`;
+export const staffLoginUrl = `${baseURL}/api/entries/staff-authenticate`;
+export const clientLoginUrl = `${baseURL}/api/entries/client-authenticate`;
+export const guestLoginUrl = `${baseURL}/api/entries/guest-authenticate`;
 // Query
 
 export const clientQueryURL = `${baseURL}/api/entries/client/query/id`; 

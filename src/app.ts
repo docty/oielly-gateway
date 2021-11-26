@@ -3,6 +3,7 @@ import { profile as staffProfile } from './staff/profile';
 import { create as staffCreate }  from './staff/create';
 import { update as staffUpdate }  from './staff/update';
 import { remove as staffRemove }  from './staff/remove';
+import { login as staffLogin } from './staff/login';
 
 import { list as clientList}    from './client/list';
 import { profile as clientProfile } from './client/profile';
@@ -10,6 +11,7 @@ import { query as clientQuery } from './client/query';
 import { create as clientCreate}  from './client/create';
 import { update as clientUpdate}  from './client/update';
 import { remove as clientRemove}  from './client/remove';
+import { login as clientLogin } from './client/login';
 
 import { list as guestList}    from './guest/list';
 import { profile as guestProfile } from './guest/profile';
@@ -57,8 +59,13 @@ import { profile as blogProfile } from './blog/profile';
 import { create as walletCreate } from './wallet/create';
 import { verify as walletVerify } from './wallet/verify';
 
+import { config } from './config';
+
 const oielly = {
+	config: config,
+	
 	staff : {
+		login: staffLogin,
 		list: staffList,
 		profile: staffProfile,
 		create: staffCreate,
@@ -66,6 +73,7 @@ const oielly = {
 		remove: staffRemove
 	},
 	client : {
+		login: clientLogin,
 		list: clientList,
 		profile: clientProfile,
 		query: clientQuery,

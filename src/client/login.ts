@@ -1,11 +1,11 @@
 import broadcast from '../util/broadcast';
-import { guestLoginUrl } from '../util/constant';
+import { clientLoginUrl } from '../util/constant';
 
 export const login = (properties: ILogin) => {
 	
 	broadcast({
 		method: 'POST', 
-		url: guestLoginUrl,
+		url: clientLoginUrl,
 		data: properties.data
 	})
 	.then((success) =>  properties.response(success.data, null))

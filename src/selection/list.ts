@@ -10,7 +10,6 @@ import broadcast from '../util/broadcast';
  */
  
 export const list = (properties: IList) => {
-	
 	broadcast({
 		method: 'GET', 
 		url: selectionUrl
@@ -20,6 +19,7 @@ export const list = (properties: IList) => {
 };
 
 export interface IList {
-  response: (success: any, error: any) => any;
+	status: string;
+    response: (success: any, error: any) => any;
 }
 
