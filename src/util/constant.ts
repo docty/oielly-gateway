@@ -1,5 +1,5 @@
 export const baseURL = process.env.NODE_ENV === 'production' 
-	? 'https://oielly-lockup.herokuapp.com' : 'http://192.168.43.146:1337';
+	? 'https://oielly-lockup.herokuapp.com' : 'http://192.168.43.147:1337';
 export const staffURL = `${baseURL}/api/entries/staff`;
 export const clientURL = `${baseURL}/api/entries/client`;
 export const guestURL = `${baseURL}/api/entries/guest`;

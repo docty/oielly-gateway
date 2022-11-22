@@ -10,16 +10,17 @@ import broadcast from '../util/broadcast';
  */
 
 export const list:any = (properties: IList) => {
-	
+	const url = `${clientURL}?min=${properties.range.min}&max=${properties.range.max}`;
 	broadcast({
 		method: 'GET', 
-		url: clientURL
+		url: url
 	})
 	.then((success) =>  properties.response(success.data, null))
 	.catch((error) =>  properties.response(null, error)); 
 };
 
 export interface IList {
+  range: {min: number, max: number};	
   response: (success: any, error: any) => any;
 }
 
